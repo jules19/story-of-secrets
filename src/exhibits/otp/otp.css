@@ -1,0 +1,53 @@
+.otp-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.otp-row-result {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.otp-row-result .otp-panel {
+  max-width: 14rem;
+  width: 100%;
+}
+
+.otp-panel {
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.otp-panel.otp-reused .otp-grid {
+  outline: 2px solid color-mix(in oklab, var(--era-accent) 70%, transparent);
+  outline-offset: 2px;
+}
+
+.otp-grid {
+  width: 100%;
+  image-rendering: pixelated;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--ink-0);
+}
+
+.otp-panel figcaption {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  line-height: 1.45;
+  color: var(--paper-faint);
+  display: grid;
+}
+
+.otp-panel figcaption strong {
+  color: var(--paper-dim);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.otp-row .x-status {
+  grid-column: 1 / -1;
+}

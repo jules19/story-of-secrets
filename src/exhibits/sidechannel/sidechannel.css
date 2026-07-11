@@ -1,0 +1,87 @@
+.sc-slots {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.sc-slot {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3.4rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--ink-0);
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  color: var(--paper-faint);
+}
+
+.sc-slot.is-known {
+  color: var(--era-accent);
+  border-color: color-mix(in oklab, var(--era-accent) 55%, transparent);
+}
+
+.sc-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  min-height: 132px;
+  margin: 1.1rem 0 0.7rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.3rem;
+}
+
+.sc-empty {
+  align-self: center;
+}
+
+.sc-bar-btn {
+  appearance: none;
+  cursor: pointer;
+  flex: 1 0 44px;
+  min-width: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.15rem;
+}
+
+.sc-bar-btn:hover {
+  border-color: var(--line-strong);
+  background: var(--ink-2);
+}
+
+.sc-bar {
+  width: 60%;
+  max-width: 26px;
+  background: linear-gradient(
+    180deg,
+    var(--era-accent),
+    color-mix(in oklab, var(--era-accent) 45%, var(--ink-0))
+  );
+  border-radius: 3px 3px 0 0;
+  transition: height 0.35s var(--ease-out);
+}
+
+.sc-bar-time {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--paper-faint);
+}
+
+.sc-bar-digit {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--paper);
+}
+
+.sc-counter {
+  margin-top: 0.4rem;
+}

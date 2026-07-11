@@ -1,0 +1,105 @@
+.bf-controls {
+  margin: 1rem 0 0.6rem;
+}
+
+.bf-note {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.bf-keyspace {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--paper-dim);
+  margin: 0.6rem 0 1.4rem;
+}
+
+.bf-scale {
+  position: relative;
+  margin: 0 0 3.2rem;
+  padding-top: 0.4rem;
+}
+
+.bf-bar {
+  display: block;
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--ink-0);
+  border: 1px solid var(--line-strong);
+  overflow: visible;
+}
+
+.bf-fill {
+  position: absolute;
+  inset: 1px auto 1px 1px;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--era-accent) 35%, var(--ink-0)),
+    var(--era-accent)
+  );
+  transition: width 0.4s var(--ease-out);
+}
+
+.bf-marker {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--era-accent);
+  border: 2px solid var(--ink-0);
+  transform: translate(-50%, -50%);
+  transition: left 0.4s var(--ease-out);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--era-accent) 30%, transparent);
+}
+
+.bf-tick {
+  position: absolute;
+  top: 0.4rem;
+  height: 10px;
+}
+
+.bf-tick-line {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 1px;
+  height: 16px;
+  background: var(--line-strong);
+}
+
+.bf-tick-label {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  transform: translateX(-50%) rotate(0deg);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  color: var(--paper-faint);
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .bf-tick-label {
+    transform: translateX(-30%) rotate(38deg);
+    transform-origin: top left;
+  }
+
+  .bf-scale {
+    margin-bottom: 4rem;
+  }
+}
+
+.bf-verdict {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--era-accent-soft);
+  border-left: 2px solid var(--era-accent);
+  padding-left: 0.9rem;
+}

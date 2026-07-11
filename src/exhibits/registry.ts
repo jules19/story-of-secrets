@@ -9,6 +9,13 @@ type Loader = () => Promise<ExhibitModule>;
 /** Exhibits are code-split; each loads as it approaches the viewport. */
 export const EXHIBITS: Partial<Record<ExhibitId, Loader>> = {
   frequency: () => import('./frequency'),
+  otp: () => import('./otp'),
+  rotor: () => import('./rotor'),
+  keyexchange: () => import('./keyexchange'),
+  bruteforce: () => import('./bruteforce'),
+  tls: () => import('./tls'),
+  sidechannel: () => import('./sidechannel'),
+  harvest: () => import('./harvest'),
 };
 
 /** Watch exhibit slots and hydrate them on approach. */
