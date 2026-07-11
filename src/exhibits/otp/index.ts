@@ -119,6 +119,8 @@ export function mount(host: HTMLElement): void {
     const k2fig = row2.querySelectorAll('figure')[1];
     if (k2caption) k2caption.textContent = reuse ? 'Key 1 again' : 'Key 2';
     k2fig?.classList.toggle('otp-reused', reuse);
+    const c2caption = row2.querySelectorAll('figcaption')[2]?.querySelector('span');
+    if (c2caption) c2caption.textContent = reuse ? 'B ⊕ Key 1 — the reuse' : 'B ⊕ Key 2';
 
     freshBtn.setAttribute('aria-pressed', String(!reuse));
     reuseBtn.setAttribute('aria-pressed', String(reuse));

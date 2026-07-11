@@ -93,6 +93,7 @@ export function mount(host: HTMLElement): void {
         'button',
         {
           type: 'button',
+          'data-key': `c-${c}`,
           class: `fq-key${selected === c ? ' is-selected' : ''}${mapped ? ' is-mapped' : ''}`,
           'aria-pressed': selected === c ? 'true' : 'false',
           'aria-label': `Cipher symbol ${c.toUpperCase()}, ${pct.toFixed(1)} percent of this message${
@@ -123,6 +124,7 @@ export function mount(host: HTMLElement): void {
         'button',
         {
           type: 'button',
+          'data-key': `p-${p}`,
           class: `fq-key fq-key-plain${used.has(p) ? ' is-used' : ''}`,
           disabled: selected === null,
           'aria-label': `English letter ${p.toUpperCase()}, typically ${pct.toFixed(1)} percent${
@@ -173,9 +175,16 @@ export function mount(host: HTMLElement): void {
   }
 
   function update(): void {
+    // Strips are rebuilt on every change; keep keyboard focus on the
+    // equivalent button so keyboard/switch users aren't dumped to <body>.
+    const focusedKey = (document.activeElement as HTMLElement | null)?.dataset?.['key'];
     renderText();
     renderStrips();
     renderStatus();
+    if (focusedKey) {
+      const again = host.querySelector<HTMLButtonElement>(`[data-key="${focusedKey}"]`);
+      if (again && !again.disabled) again.focus();
+    }
   }
 
   // — controls —

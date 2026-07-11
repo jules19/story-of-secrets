@@ -18,8 +18,9 @@ export class CiteIndex {
   refs(ids: string[] | undefined): string {
     if (!ids || ids.length === 0) return '';
     const links = ids
-      .map((id) => {
-        const n = this.num(id);
+      .map((id) => ({ id, n: this.num(id) }))
+      .sort((a, b) => a.n - b.n)
+      .map(({ id, n }) => {
         const source = SOURCES[id];
         if (!source) throw new Error(`Unknown source id: ${id}`);
         return `<a class="cite-ref" href="#src-${esc(id)}" aria-label="Source ${n}: ${esc(source.label)}">${n}</a>`;
