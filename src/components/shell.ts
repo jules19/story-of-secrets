@@ -73,25 +73,29 @@ function initToc(): void {
 function initCurrentChapter(): void {
   const nowLabel = document.querySelector<HTMLElement>('[data-now]');
   const railLinks = [...document.querySelectorAll<HTMLAnchorElement>('.rail a')];
+  const prologue = document.getElementById('prologue');
   const sections = [...document.querySelectorAll<HTMLElement>('.chapter[data-chapter-title]')];
   if (sections.length === 0 || !('IntersectionObserver' in window)) return;
 
-  const setCurrent = (section: HTMLElement) => {
-    const era = section.dataset.era;
+  const setCurrent = (section: HTMLElement | null) => {
+    const era = section?.dataset.era ?? prologue?.dataset.era;
     if (era) document.documentElement.dataset.era = era;
-    if (nowLabel) nowLabel.textContent = section.dataset.chapterTitle ?? '';
+    if (nowLabel) nowLabel.textContent = section?.dataset.chapterTitle ?? '';
     for (const link of railLinks) {
-      link.classList.toggle('is-current', link.dataset.target === section.id);
+      link.classList.toggle('is-current', link.dataset.target === section?.id);
     }
   };
 
   const io = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
-        if (entry.isIntersecting) setCurrent(entry.target as HTMLElement);
+        if (!entry.isIntersecting) continue;
+        const target = entry.target as HTMLElement;
+        setCurrent(target === prologue ? null : target);
       }
     },
     { rootMargin: '-40% 0px -55% 0px' },
   );
   for (const s of sections) io.observe(s);
+  if (prologue) io.observe(prologue);
 }
