@@ -43,8 +43,8 @@
 .rt-col-label {
   fill: var(--paper-faint);
   font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  letter-spacing: 0.06em;
 }
 
 .rt-path {

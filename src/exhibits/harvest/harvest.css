@@ -61,6 +61,11 @@
   color: var(--era-accent);
 }
 
+.hv-mark-send .hv-mark-label {
+  left: 0;
+  transform: none;
+}
+
 .hv-playhead {
   position: absolute;
   top: 50%;
