@@ -1,0 +1,116 @@
+.hv-settings {
+  margin: 1rem 0;
+}
+
+.hv-scrub {
+  margin-bottom: 1.2rem;
+}
+
+.hv-year-readout {
+  font-size: 1.2rem;
+}
+
+.hv-track {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--ink-0);
+  border: 1px solid var(--line-strong);
+  margin: 1.6rem 0 2.4rem;
+}
+
+.hv-span-secrecy {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in oklab, var(--era-accent) 24%, transparent) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.hv-mark {
+  position: absolute;
+  top: -6px;
+  width: 2px;
+  height: 26px;
+  background: var(--paper-faint);
+  transform: translateX(-50%);
+}
+
+.hv-mark-crqc {
+  background: var(--era-accent);
+}
+
+.hv-mark-label {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+  white-space: nowrap;
+}
+
+.hv-mark-crqc .hv-mark-label {
+  color: var(--era-accent);
+}
+
+.hv-mark-send .hv-mark-label {
+  left: 0;
+  transform: none;
+}
+
+.hv-playhead {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink-0);
+  transform: translate(-50%, -50%);
+  transition: left 0.15s linear;
+}
+
+.hv-vault {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  background: color-mix(in srgb, var(--ink-0) 65%, transparent);
+  margin-bottom: 0.9rem;
+}
+
+.hv-vault.is-opened {
+  border-color: color-mix(in oklab, var(--era-accent) 60%, transparent);
+}
+
+.hv-vault-title {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+  margin-bottom: 0.6rem;
+}
+
+.hv-vault-body {
+  border: 0;
+  padding: 0.4rem 0 0;
+  background: transparent;
+  color: var(--paper-faint);
+}
+
+.hv-vault.is-opened .hv-vault-body {
+  color: var(--era-accent-soft);
+}
+
+.hv-mosca {
+  border-left: 2px solid var(--line-strong);
+  padding-left: 0.9rem;
+}

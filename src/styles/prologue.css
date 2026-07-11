@@ -1,0 +1,138 @@
+/* ————————————————————————————————————————————————
+   Prologue: the intercepted line.
+   ———————————————————————————————————————————————— */
+.prologue {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 1.4rem;
+  padding: 5.5rem var(--gutter) 3rem;
+  position: relative;
+}
+
+.prologue .kicker {
+  margin-bottom: 0;
+}
+
+.decipher {
+  font-family: var(--mono);
+  font-size: clamp(1.05rem, 0.6rem + 2.4vw, 2rem);
+  letter-spacing: 0.14em;
+  line-height: 1.9;
+  max-width: 30ch;
+  color: var(--paper-dim);
+  min-height: 3.8em;
+}
+
+.decipher .glyph {
+  display: inline-block;
+  min-width: 0.6em;
+}
+
+.decipher .glyph.is-cipher {
+  color: var(--era-accent);
+  opacity: 0.85;
+}
+
+.decipher .glyph.is-plain {
+  color: var(--paper);
+  font-family: var(--serif);
+  letter-spacing: 0.02em;
+}
+
+.prologue-attrib {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-faint);
+  max-width: 30rem;
+  line-height: 1.6;
+}
+
+.prologue-intro {
+  max-width: 34rem;
+  color: var(--paper-dim);
+  font-size: clamp(1rem, 0.95rem + 0.4vw, 1.15rem);
+}
+
+.prologue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.begin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  border: 1px solid var(--era-accent);
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  background: var(--era-accent-ink);
+}
+
+.begin-link:hover,
+.begin-link:focus-visible {
+  background: color-mix(in oklab, var(--era-accent) 30%, var(--ink-0));
+  color: var(--paper);
+}
+
+.prologue-minutes {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+.decipher .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.scroll-cue {
+  margin-top: clamp(1.5rem, 6vh, 4rem);
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+html.motion-ok .scroll-cue::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 2rem;
+  margin: 0.5rem auto 0;
+  background: linear-gradient(180deg, var(--era-accent), transparent);
+  animation: cue-drop 2.2s var(--ease-out) infinite;
+}
+
+@keyframes cue-drop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  35% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 0;
+  }
+}

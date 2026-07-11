@@ -1,0 +1,237 @@
+/* ————————————————————————————————————————————————
+   Shell: top bar, progress, contents panel, rail, footer.
+   ———————————————————————————————————————————————— */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem var(--gutter) 0.55rem;
+  background: color-mix(in srgb, var(--ink-0) 82%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--sans);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.topbar .wordmark {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--paper-dim);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topbar .wordmark strong {
+  color: var(--paper);
+  font-weight: 600;
+}
+
+.topbar-now {
+  display: none;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-size: var(--text-tiny);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--era-accent-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 700px) {
+  .topbar-now {
+    display: block;
+  }
+}
+
+.toc-button {
+  appearance: none;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--paper-dim);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  font-size: var(--text-small);
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.toc-button:hover {
+  color: var(--paper);
+  border-color: var(--era-accent);
+}
+
+.progress-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  z-index: 51;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--acc-manuscript), var(--era-accent));
+}
+
+/* Contents panel */
+.toc {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  background: color-mix(in srgb, var(--ink-0) 92%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  overflow-y: auto;
+  padding: clamp(3.5rem, 8vh, 6rem) var(--gutter) 4rem;
+}
+
+.toc.is-open {
+  display: block;
+}
+
+.toc-inner {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.toc-title {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+  margin-bottom: 1.6rem;
+}
+
+.toc-close {
+  position: fixed;
+  top: 0.7rem;
+  right: var(--gutter);
+  appearance: none;
+  background: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  color: var(--paper);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.toc-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0.2rem;
+  text-decoration: none;
+  color: var(--paper-dim);
+}
+
+.toc-list a:hover,
+.toc-list a:focus-visible {
+  color: var(--paper);
+}
+
+.toc-num {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.1em;
+  color: var(--era-accent);
+  min-width: 2.6rem;
+}
+
+.toc-list .toc-chapter-title {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+}
+
+.toc-kicker {
+  margin-left: auto;
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  color: var(--paper-faint);
+  text-align: right;
+}
+
+/* Desktop chapter rail */
+.rail {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .rail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    position: fixed;
+    left: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+  }
+
+  .rail a {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    color: var(--paper-faint);
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+
+  .rail a:hover {
+    color: var(--paper);
+  }
+
+  .rail a.is-current {
+    color: var(--era-accent);
+    border-color: color-mix(in oklab, var(--era-accent) 55%, transparent);
+  }
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 5rem;
+  padding: 3rem var(--gutter) 4.5rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-faint);
+}
+
+.site-footer .inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.site-footer a {
+  color: var(--paper-dim);
+}
