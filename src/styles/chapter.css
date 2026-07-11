@@ -1,0 +1,366 @@
+/* ————————————————————————————————————————————————
+   Narrative: chapter heads, prose, asides, pull lines,
+   fact labels, go-deeper panels, citations, sources.
+   ———————————————————————————————————————————————— */
+.chapter {
+  position: relative;
+  padding: clamp(4.5rem, 12vh, 8.5rem) var(--gutter) clamp(2.5rem, 6vh, 4rem);
+}
+
+.chapter + .chapter::before {
+  /* era divider: a thin rule with a diamond, in the arriving era's accent */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(9rem, 40vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--era-accent), transparent);
+}
+
+.chapter-head {
+  max-width: var(--measure);
+  margin: 0 auto clamp(2rem, 5vh, 3.2rem);
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--era-accent);
+  margin-bottom: 1.1rem;
+}
+
+.ch-number {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--paper-faint);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-head h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 1.3rem + 3.4vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.lede {
+  margin-top: 1.3rem;
+  font-size: clamp(1.08rem, 1rem + 0.5vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--paper-dim);
+  font-style: italic;
+  max-width: 36rem;
+}
+
+.chapter-body {
+  max-width: var(--measure);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.chapter-body > * {
+  min-width: 0;
+}
+
+/* Wide blocks (exhibits, timelines) break out of the prose column, centred. */
+.breakout {
+  --breakout-w: min(var(--measure-wide), calc(100vw - 2 * var(--gutter)));
+  width: var(--breakout-w);
+  margin-left: calc((100% - var(--breakout-w)) / 2);
+}
+
+.chapter-body > p {
+  hanging-punctuation: first;
+}
+
+/* Drop cap on each chapter's opening paragraph */
+.p-first::first-letter {
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.82;
+  padding: 0.08em 0.12em 0 0;
+  color: var(--era-accent);
+  font-style: normal;
+}
+
+.pull {
+  margin: 1.2rem 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--era-accent);
+  font-size: clamp(1.25rem, 1.1rem + 0.9vw, 1.7rem);
+  line-height: 1.35;
+  font-style: italic;
+  color: var(--era-accent-soft);
+  text-wrap: balance;
+}
+
+.aside-card {
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--era-accent);
+  border-radius: var(--radius);
+  background: var(--ink-1);
+  padding: 1.15rem 1.25rem 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.aside-card h4 {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--era-accent-soft);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.aside-card p {
+  font-size: 0.98rem;
+  color: var(--paper-dim);
+}
+
+.aside-card p + p {
+  margin-top: 0.7rem;
+}
+
+/* Fact-status chips */
+.fact {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.fact-record {
+  color: #9dc79b;
+  border-color: #9dc79b55;
+}
+.fact-estimate {
+  color: #d9b26a;
+  border-color: #d9b26a55;
+}
+.fact-analogy {
+  color: #8ab4cf;
+  border-color: #8ab4cf55;
+}
+.fact-mystery {
+  color: #c39bd9;
+  border-color: #c39bd955;
+}
+
+/* Go deeper */
+.deeper {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ink-1) 70%, transparent);
+}
+
+.deeper > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-dim);
+  min-height: 44px;
+}
+
+.deeper > summary::-webkit-details-marker {
+  display: none;
+}
+
+.deeper > summary::before {
+  content: '+';
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  border: 1px solid var(--era-accent);
+  color: var(--era-accent);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.deeper[open] > summary::before {
+  content: '–';
+}
+
+.deeper > summary:hover {
+  color: var(--paper);
+}
+
+.deeper-label {
+  color: var(--era-accent-soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: var(--text-tiny);
+}
+
+.deeper-body {
+  padding: 0.2rem 1.15rem 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.deeper-body p {
+  font-size: 0.98rem;
+  color: var(--paper-dim);
+}
+
+.x-inline-mono {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  color: var(--era-accent-soft);
+  letter-spacing: 0.06em;
+}
+
+/* Citations */
+.cite-ref {
+  font-family: var(--sans);
+  font-size: 0.66em;
+  vertical-align: super;
+  line-height: 0;
+  text-decoration: none;
+  color: var(--era-accent);
+  padding: 0 0.12em;
+}
+
+.cite-ref:hover {
+  color: var(--paper);
+}
+
+.sources-section {
+  padding: clamp(4rem, 10vh, 6rem) var(--gutter) 1rem;
+}
+
+.sources-section .inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.sources-section h2 {
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.sources-intro {
+  color: var(--paper-dim);
+  margin-bottom: 2rem;
+  font-size: 0.98rem;
+}
+
+.source-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.source-list li {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.6rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+  color: var(--paper-dim);
+}
+
+.source-num {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  color: var(--era-accent);
+  padding-top: 0.25rem;
+}
+
+.source-label {
+  color: var(--paper);
+}
+
+/* Era timeline strip */
+.timeline {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0 1rem;
+  scrollbar-width: thin;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+  padding: 0 0.2rem;
+}
+
+.timeline-event {
+  position: relative;
+  min-width: 11.5rem;
+  max-width: 13rem;
+  padding: 1rem 1.1rem 0.4rem 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  top: -3.5px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--era-accent);
+}
+
+.timeline-year {
+  font-family: var(--mono);
+  font-size: var(--text-small);
+  color: var(--era-accent);
+}
+
+.timeline-text {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--paper-dim);
+  margin-top: 0.3rem;
+}
+
+.timeline-hint {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  color: var(--paper-faint);
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 900px) {
+  .timeline-hint {
+    display: none;
+  }
+}

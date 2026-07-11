@@ -23,7 +23,7 @@ believed they were safe and someone else was already reading their mail.
    cipher is imperfect and runs the world.
 4. **The human flaw** — key reuse, lazy operators, stolen documents, misplaced confidence.
    Cryptosystems rarely fall to mathematics alone.
-5. **The politics of secrecy** — who is *allowed* strong cryptography has been contested from the
+5. **The politics of secrecy** — who is _allowed_ strong cryptography has been contested from the
    Black Chambers to the Crypto Wars to today.
 6. **Secret → public** — the shift from secret algorithms to publicly scrutinised ones is the
    field's central philosophical event (Kerckhoffs → DES grumbling → AES competition).
@@ -39,7 +39,7 @@ and the interface labels which.
 
 No title-then-wall-of-text. The visitor lands inside an intercepted ciphertext — a real fragment
 of the story of Mary, Queen of Scots — which resolves into plaintext as they begin. The first
-thing the site does is *show* that a broken cipher can kill, before it explains anything.
+thing the site does is _show_ that a broken cipher can kill, before it explains anything.
 
 ## Structure
 
@@ -53,7 +53,7 @@ decoration.
 One coherent system that ages as the story does: a paper-and-ink world whose accent hue and
 texture shift subtly per era (manuscript ochre → engraving sepia → machine-age steel blue →
 information-age signal green-cyan → quantum violet), on a constant deep-ink ground with a single
-editorial type system. Serif for narrative, monospace for anything that is *material* (ciphertext,
+editorial type system. Serif for narrative, monospace for anything that is _material_ (ciphertext,
 keys, frequencies). Motion is cinematic but restrained: slow reveals, resolving letters, layered
 SVG diagrams. Forbidden: hooded figures, glowing padlocks, matrix rain, neon circuit boards,
 stock photography.

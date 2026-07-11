@@ -12,9 +12,9 @@ epistemic status we assign each claim. Status categories used across the site:
 
 General secondary sources used throughout:
 
-- KAHN — David Kahn, *The Codebreakers: The Story of Secret Writing* (Macmillan 1967; rev. ed.
+- KAHN — David Kahn, _The Codebreakers: The Story of Secret Writing_ (Macmillan 1967; rev. ed.
   Scribner 1996). The standard scholarly history of cryptology to the mid-20th century.
-- SINGH — Simon Singh, *The Code Book* (Fourth Estate, 1999). Reliable popular synthesis;
+- SINGH — Simon Singh, _The Code Book_ (Fourth Estate, 1999). Reliable popular synthesis;
   used for narrative shape, cross-checked against Kahn and primary material for specifics.
 
 ---
@@ -32,7 +32,7 @@ General secondary sources used throughout:
 - In 2023 George Lasry, Norbert Biermann and Satoshi Tomokiyo announced the decryption of 57
   previously unread enciphered letters of Mary (mostly 1578–1584, found in the Bibliothèque
   nationale de France), published as "Deciphering Mary Stuart's lost letters from 1578–1584",
-  *Cryptologia* 47:2 (2023). **record**.
+  _Cryptologia_ 47:2 (2023). **record**.
 - Framing "the most dangerous cipher is the one you believe is unbreakable" is our editorial
   synthesis of the episode, flagged as interpretation, not a quotation. **analogy/interpretation**.
 
@@ -40,18 +40,18 @@ General secondary sources used throughout:
 
 - Early substitution/transposition devices: Spartan skytale (transposition; described in later
   classical sources, e.g. Plutarch — historicity as a cryptographic device debated by modern
-  scholars, per Kelly, "The Myth of the Skytale", *Cryptologia* 1998) — presented as
-  **estimate/disputed**. Caesar's shifted alphabet reported by Suetonius (*Life of Julius
-  Caesar* 56). **record** for the Suetonius report itself.
-- Abū Yūsuf Yaʿqūb ibn ʾIsḥāq al-Kindī (c. 801–873, Baghdad) wrote *Risāla fī Istikhrāj
-  al-Muʿammā* ("On Extracting Obscured Correspondence"), the earliest surviving description of
+  scholars, per Kelly, "The Myth of the Skytale", _Cryptologia_ 1998) — presented as
+  **estimate/disputed**. Caesar's shifted alphabet reported by Suetonius (_Life of Julius
+  Caesar_ 56). **record** for the Suetonius report itself.
+- Abū Yūsuf Yaʿqūb ibn ʾIsḥāq al-Kindī (c. 801–873, Baghdad) wrote _Risāla fī Istikhrāj
+  al-Muʿammā_ ("On Extracting Obscured Correspondence"), the earliest surviving description of
   frequency analysis; the manuscript was found in the Süleymaniye Library (Istanbul) and
   described for modern readers in Ibrahim A. Al-Kadi, "Origins of Cryptology: The Arab
-  Contributions", *Cryptologia* 16:2 (1992). **record** — Al-Kadi 1992; SINGH ch. 1; KAHN ch. 3.
+  Contributions", _Cryptologia_ 16:2 (1992). **record** — Al-Kadi 1992; SINGH ch. 1; KAHN ch. 3.
 - Frequency analysis defeats every simple (monoalphabetic) substitution given enough text.
   **record** — standard cryptology; demonstrated live in the exhibit.
 - English letter-frequency table used in the exhibit is computed from our own sample corpus and
-  is consistent with published tables (e.g. Lewand, *Cryptological Mathematics*, MAA 2000).
+  is consistent with published tables (e.g. Lewand, _Cryptological Mathematics_, MAA 2000).
   **record** (methodology stated in-app).
 
 ## Chapter: Nomenclators and the Black Chambers
@@ -73,9 +73,9 @@ General secondary sources used throughout:
 - Voynich manuscript: ~240-page illustrated codex in an unread script, Beinecke Library, Yale,
   MS 408; radiocarbon dating of the vellum at the University of Arizona (2009) gave early 15th
   century (c. 1404–1438). No decryption has achieved scholarly acceptance; hoax vs. language vs.
-  cipher remains open. **mystery** — Beinecke Library catalogue; Kennedy & Churchill, *The
-  Voynich Manuscript* (2004); dating reported in Yale/Beinecke materials.
-- Beale ciphers: known only from an 1885 Lynchburg pamphlet (*The Beale Papers*); paper #2
+  cipher remains open. **mystery** — Beinecke Library catalogue; Kennedy & Churchill, _The
+  Voynich Manuscript_ (2004); dating reported in Yale/Beinecke materials.
+- Beale ciphers: known only from an 1885 Lynchburg pamphlet (_The Beale Papers_); paper #2
   reads out via the Declaration of Independence as a book cipher; papers #1 and #3 unsolved;
   serious analysts (including Kahn) regard the whole affair as a probable hoax; no treasure has
   ever been verified. **mystery, hoax likely** — KAHN ch. 21; the 1885 pamphlet itself.
@@ -84,46 +84,46 @@ General secondary sources used throughout:
 
 ## Chapter: Kerckhoffs
 
-- Auguste Kerckhoffs, "La cryptographie militaire", *Journal des sciences militaires*,
+- Auguste Kerckhoffs, "La cryptographie militaire", _Journal des sciences militaires_,
   January & February 1883, states six requirements for field ciphers; the second — the system
   must not require secrecy and must be able to fall into enemy hands without inconvenience —
   is the modern "Kerckhoffs's principle". **record** — the 1883 articles (available via the
   Bibliothèque nationale / petitcolas.net transcription); KAHN ch. 6.
 - Claude Shannon's restatement, "the enemy knows the system being used", appears in
-  "Communication Theory of Secrecy Systems", *Bell System Technical Journal* 28:4 (1949),
+  "Communication Theory of Secrecy Systems", _Bell System Technical Journal_ 28:4 (1949),
   p. 662. **record** — the paper itself.
 
 ## Chapter: Machines — Enigma, the Poles, Bletchley, the Friedmans
 
 - Commercial Enigma marketed by Arthur Scherbius from 1923; German military adoptions from
   1926 (navy) / 1928 (army) with the plugboard added for military models. **record** — KAHN
-  (rev. ed.); Kozaczuk, *Enigma* (1984).
+  (rev. ed.); Kozaczuk, _Enigma_ (1984).
 - Marian Rejewski reconstructed the military Enigma's wiring in December 1932 using permutation
   theory plus documents (operating instructions and key tables) obtained from Hans-Thilo
   Schmidt by French intelligence (Gustave Bertrand) and shared with Poland. **record** —
-  Rejewski's own account, "How Polish Mathematicians Deciphered the Enigma", *Annals of the
-  History of Computing* 3:3 (1981); Kozaczuk 1984.
+  Rejewski's own account, "How Polish Mathematicians Deciphered the Enigma", _Annals of the
+  History of Computing_ 3:3 (1981); Kozaczuk 1984.
 - Rejewski, Jerzy Różycki and Henryk Zygalski built recovery methods and machines (cyclometer,
   "bomba", Zygalski sheets); Poland handed complete results, including reconstructed Enigma
   doubles, to Britain and France at the Pyry meeting near Warsaw, 25–26 July 1939. **record** —
   Rejewski 1981; Kozaczuk 1984.
 - Bletchley Park (Turing, Welchman et al.) industrialised the attack (bombes, cribs); Ultra
-  intelligence resulted. **record** — Hinsley & Stripp (eds.), *Codebreakers* (1993).
+  intelligence resulted. **record** — Hinsley & Stripp (eds.), _Codebreakers_ (1993).
 - Sir Harry Hinsley's estimate that Ultra shortened the European war by "not less than two
   years" is an estimate by the official historian, debated by other scholars, and is presented
   as such — not as fact. **estimate** — Hinsley, "The Influence of ULTRA in the Second World
   War" (1993 lecture; and in Hinsley & Stripp 1993).
 - Operator and procedural failures (repeated message keys until 1940, cillies, re-sent messages,
   stereotyped cribs) were essential to practical breaks. **record** — Rejewski 1981; Welchman,
-  *The Hut Six Story* (1982).
+  _The Hut Six Story_ (1982).
 - Elizebeth Smith Friedman led Coast Guard cryptanalytic units, broke rum-runner networks during
   Prohibition and testified in smuggling trials; in WWII her unit broke Enigma-based and other
   traffic of German intelligence networks in South America (documented in decrypted "Operation
-  Bolívar" traffic); credit long went publicly to the FBI. **record** — Jason Fagone, *The
-  Woman Who Smashed Codes* (2017), which is built on her papers at the Marshall Foundation;
+  Bolívar" traffic); credit long went publicly to the FBI. **record** — Jason Fagone, _The
+  Woman Who Smashed Codes_ (2017), which is built on her papers at the Marshall Foundation;
   NSA's declassified history of Coast Guard Unit 387.
-- William F. Friedman coined "cryptanalysis", developed the index of coincidence (*The Index of
-  Coincidence and Its Applications in Cryptography*, Riverbank Publication No. 22, 1922), and
+- William F. Friedman coined "cryptanalysis", developed the index of coincidence (_The Index of
+  Coincidence and Its Applications in Cryptography_, Riverbank Publication No. 22, 1922), and
   led the Army SIS team (Rowlett et al.) that reconstructed the Japanese PURPLE machine in 1940
   without ever seeing one. **record** — KAHN chs. 12, 18; NSA Cryptologic Hall of Honor
   materials.
@@ -136,15 +136,14 @@ General secondary sources used throughout:
   division of credit debated — flagged where mentioned).
 - Claude Shannon proved perfect secrecy is achievable (the one-time pad attains it) and that
   perfect secrecy requires key material at least as large as the message — in "Communication
-  Theory of Secrecy Systems", *BSTJ* 28:4 (1949), developed in classified form in 1945.
+  Theory of Secrecy Systems", _BSTJ_ 28:4 (1949), developed in classified form in 1945.
   **record** — the paper.
-- VENONA: US Army/ NSA program (begun 1943 under Gene Grabeel; Meredith Gardner's breakthroughs
-  1946) read portions of Soviet diplomatic/intelligence cables because wartime Soviet pad
+- VENONA: US Army/ NSA program (begun 1943 under Gene Grabeel; Meredith Gardner's breakthroughs 1946) read portions of Soviet diplomatic/intelligence cables because wartime Soviet pad
   production duplicated ~35,000 pad pages; duplication plus cribs made partial decryption
   possible; ~2,900 messages released publicly in 1995; identified espionage including Fuchs and
-  the Rosenberg network (codename LIBERAL). **record** — NSA/CIA, *VENONA: Soviet Espionage
-  and the American Response 1939–1957* (1996); Haynes & Klehr, *Venona: Decoding Soviet
-  Espionage in America* (Yale, 1999). Counts (~35k duplicated pages, ~2,900 released messages)
+  the Rosenberg network (codename LIBERAL). **record** — NSA/CIA, _VENONA: Soviet Espionage
+  and the American Response 1939–1957_ (1996); Haynes & Klehr, _Venona: Decoding Soviet
+  Espionage in America_ (Yale, 1999). Counts (~35k duplicated pages, ~2,900 released messages)
   follow the NSA/CIA volume.
 - XOR reuse demonstration (c1 ⊕ c2 = p1 ⊕ p2) is standard mathematics. **record**.
 
@@ -155,15 +154,15 @@ General secondary sources used throughout:
   Williamson found the discrete-log key-agreement analogue in 1974. Kept secret until GCHQ's
   public acknowledgement on 18 December 1997 (Ellis died weeks before, November 1997).
   **record** — GCHQ's released Ellis paper "The History of Non-Secret Encryption" (1987,
-  released 1997); SINGH ch. 6; Levy, *Crypto* (2001).
-- Whitfield Diffie and Martin Hellman, "New Directions in Cryptography", *IEEE Transactions on
-  Information Theory* 22:6 (November 1976), introduced public-key cryptography and the
+  released 1997); SINGH ch. 6; Levy, _Crypto_ (2001).
+- Whitfield Diffie and Martin Hellman, "New Directions in Cryptography", _IEEE Transactions on
+  Information Theory_ 22:6 (November 1976), introduced public-key cryptography and the
   Diffie–Hellman key exchange; Ralph Merkle's "puzzles" work (conceived 1974, published as
-  "Secure Communications over Insecure Channels", *CACM* 1978) independently anticipated key
+  "Secure Communications over Insecure Channels", _CACM_ 1978) independently anticipated key
   agreement; Hellman has said the scheme should be called Diffie–Hellman–Merkle. **record** —
   the 1976 paper; Merkle 1978; Levy 2001.
 - RSA: Rivest, Shamir, Adleman, "A Method for Obtaining Digital Signatures and Public-Key
-  Cryptosystems", *CACM* 21:2 (February 1978). **record**.
+  Cryptosystems", _CACM_ 21:2 (February 1978). **record**.
 - The paint-mixing analogy for Diffie–Hellman is an educational analogy (labelled as such);
   the real system uses modular exponentiation, which our exhibit computes with small honest
   numbers. **analogy**, with the maths shown for real.
@@ -173,17 +172,17 @@ General secondary sources used throughout:
 - DES: developed from IBM's Lucifer; NSA involvement in design review; key reduced to 56 bits;
   published as FIPS 46 (15 January 1977) — the first public, standardised cipher, and
   criticised immediately: Diffie & Hellman, "Exhaustive Cryptanalysis of the NBS Data
-  Encryption Standard", *Computer* 10:6 (1977), argued a ~$20M machine could brute-force it.
+  Encryption Standard", _Computer_ 10:6 (1977), argued a ~$20M machine could brute-force it.
   **record** — FIPS 46; the 1977 critique.
 - The S-boxes turned out to resist differential cryptanalysis (published by Biham & Shamir,
-  1990); Don Coppersmith (1994, *IBM J. R&D* 38:3) confirmed IBM knew of the technique
+  1990); Don Coppersmith (1994, _IBM J. R&D_ 38:3) confirmed IBM knew of the technique
   ("T-attack") in 1974 and had been asked to keep it quiet. **record**.
 - EFF's Deep Crack (July 1998) broke a DES challenge in 56 hours for under $250,000; with
-  distributed.net (January 1999) in 22 hours 15 minutes. **record** — EFF, *Cracking DES*
+  distributed.net (January 1999) in 22 hours 15 minutes. **record** — EFF, _Cracking DES_
   (O'Reilly, 1998); EFF/RSA DES Challenge III announcements.
 - US export controls treated strong cryptography as a munition (ITAR, later EAR); exportable
   products were long limited to 40-bit keys; controls were substantially relaxed in
-  January 2000. **record** — Levy, *Crypto* (2001); Federal Register, Jan 14 2000 (65 FR 2492).
+  January 2000. **record** — Levy, _Crypto_ (2001); Federal Register, Jan 14 2000 (65 FR 2492).
 - Bernstein v. US DOJ: Ninth Circuit panel held source code is speech protected by the First
   Amendment (176 F.3d 1132, 1999); opinion later withdrawn for en banc review and the case
   mooted by regulation changes — presented with that nuance. **record**.
@@ -194,9 +193,9 @@ General secondary sources used throughout:
 - PGP: Philip Zimmermann released PGP 1.0 in June 1991; it spread internationally on Usenet;
   a US Customs / grand jury investigation into export violation ran ~1993–96 and was dropped
   without charges (announcement by the US Attorney, N.D. Cal., 11 January 1996); MIT Press
-  published the PGP 5 source code as a book (1995 for PGP 2.6.2 internals — *PGP Source Code
-  and Internals*, 1995), exploiting the print/export distinction. **record** — Levy 2001;
-  Zimmermann's own published account; Garfinkel, *PGP* (O'Reilly 1995).
+  published the PGP 5 source code as a book (1995 for PGP 2.6.2 internals — _PGP Source Code
+  and Internals_, 1995), exploiting the print/export distinction. **record** — Levy 2001;
+  Zimmermann's own published account; Garfinkel, _PGP_ (O'Reilly 1995).
 - AES competition: NIST ran an open international competition (1997–2000, 15 candidates);
   Rijndael (Daemen & Rijmen, Belgium) selected October 2000, published as FIPS 197
   (November 2001) — the standard-setting process itself became public and adversarial.
@@ -225,8 +224,8 @@ General secondary sources used throughout:
   take. **record** — the paper.
 - Kocher, Jaffe & Jun, "Differential Power Analysis", CRYPTO '99: power consumption traces leak
   key bits from smart cards. **record**.
-- TEMPEST/van Eck: electromagnetic emanations reconstruct displays (van Eck, *Computers &
-  Security*, 1985); NSA TEMPEST program partially declassified. **record**.
+- TEMPEST/van Eck: electromagnetic emanations reconstruct displays (van Eck, _Computers &
+  Security_, 1985); NSA TEMPEST program partially declassified. **record**.
 - Spectre/Meltdown (disclosed January 2018) showed CPUs themselves leak via speculative
   execution — cited as the scale of the problem. **record** — Kocher et al., Lipp et al.,
   IEEE S&P 2019 papers.
@@ -243,8 +242,8 @@ General secondary sources used throughout:
 
 - AIDS Trojan (December 1989, Joseph Popp): mailed diskettes, hid filenames/encrypted file
   names with symmetric crypto, demanded $189 to a Panama PO box — generally counted the first
-  ransomware; weak crypto, recoverable. **record** — contemporary reporting; Bates, *Virus
-  Bulletin* January 1990 analysis.
+  ransomware; weak crypto, recoverable. **record** — contemporary reporting; Bates, _Virus
+  Bulletin_ January 1990 analysis.
 - Modern cryptoviral extortion using hybrid public-key ransomware was described academically by
   Young & Yung (IEEE S&P 1996) before it became criminal practice. **record** — their paper.
 - CryptoLocker (2013) made public-key ransomware plus Bitcoin payments a criminal business

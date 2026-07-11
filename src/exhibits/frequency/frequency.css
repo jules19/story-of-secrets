@@ -1,0 +1,125 @@
+.fq-text {
+  margin: 0.9rem 0 0.6rem;
+  min-height: 7em;
+}
+
+.fq-cipherchar {
+  color: var(--paper-faint);
+}
+
+.fq-resolved {
+  color: var(--era-accent-soft);
+  font-family: var(--serif);
+  letter-spacing: 0.02em;
+}
+
+.fq-solved .fq-text {
+  border-color: color-mix(in oklab, var(--era-accent) 55%, transparent);
+}
+
+.fq-howto {
+  margin-top: 1rem;
+}
+
+.fq-strip-label {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+  margin: 0.9rem 0 0.35rem;
+}
+
+.fq-strip {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.4rem;
+  scrollbar-width: thin;
+}
+
+.fq-swipe-hint {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  color: var(--paper-faint);
+  margin: 0.1rem 0 0.6rem;
+}
+
+@media (min-width: 1120px) {
+  .fq-swipe-hint {
+    display: none;
+  }
+}
+
+.fq-key {
+  appearance: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+  min-width: 44px;
+  min-height: 72px;
+  padding: 0.35rem 0.25rem 0.3rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--ink-0);
+  font-family: var(--mono);
+}
+
+.fq-key:hover {
+  border-color: var(--line-strong);
+}
+
+.fq-key.is-selected {
+  border-color: var(--era-accent);
+  background: var(--era-accent-ink);
+}
+
+.fq-key.is-used {
+  opacity: 0.45;
+}
+
+.fq-key:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.fq-key-plain .fq-bar {
+  background: var(--paper-faint);
+}
+
+.fq-bar {
+  width: 10px;
+  border-radius: 2px 2px 0 0;
+  background: var(--era-accent);
+}
+
+.fq-letter {
+  font-size: 0.95rem;
+  color: var(--paper);
+  line-height: 1.1;
+}
+
+.fq-mapped {
+  font-size: 0.72rem;
+  color: var(--era-accent-soft);
+  line-height: 1;
+}
+
+.fq-key.is-mapped .fq-letter {
+  color: var(--paper-dim);
+}
+
+@media (min-width: 1120px) {
+  .fq-strip {
+    gap: 2px;
+  }
+
+  .fq-key {
+    min-width: 34px;
+  }
+}

@@ -1,0 +1,188 @@
+/* ————————————————————————————————————————————————
+   Exhibit frame + shared control kit.
+   Exhibit-specific styles live next to each exhibit module.
+   ———————————————————————————————————————————————— */
+.exhibit {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--era-accent) 4%, transparent), transparent 20%),
+    var(--ink-1);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.exhibit-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  padding: 1.1rem 1.25rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.exhibit-tag {
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--era-accent);
+}
+
+.exhibit-head h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+  flex: 1 1 14rem;
+}
+
+.exhibit-teaches {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-dim);
+}
+
+.exhibit-body {
+  padding: 1.25rem;
+}
+
+.exhibit-fallback {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-faint);
+}
+
+.exhibit-note {
+  padding: 0.8rem 1.25rem 1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  color: var(--paper-faint);
+}
+
+/* —— control kit —— */
+.x-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.x-btn {
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  min-height: 44px;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.x-btn:hover:not(:disabled) {
+  border-color: var(--era-accent);
+}
+
+.x-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.x-btn.is-primary {
+  background: var(--era-accent-ink);
+  border-color: color-mix(in oklab, var(--era-accent) 60%, transparent);
+  color: var(--era-accent-soft);
+}
+
+.x-btn.is-primary:hover:not(:disabled) {
+  color: var(--paper);
+}
+
+.x-field {
+  display: grid;
+  gap: 0.35rem;
+  font-family: var(--sans);
+  font-size: var(--text-tiny);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+.x-input,
+.x-select {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--paper);
+  background: var(--ink-0);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.7rem;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.x-input:focus-visible,
+.x-select:focus-visible {
+  outline: 2px solid var(--era-accent);
+  outline-offset: 1px;
+}
+
+.x-range {
+  accent-color: var(--era-accent);
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+}
+
+.x-readout {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--era-accent-soft);
+}
+
+.x-caption {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--paper-dim);
+  line-height: 1.5;
+}
+
+.x-mono-block {
+  font-family: var(--mono);
+  font-size: clamp(0.78rem, 0.72rem + 0.3vw, 0.95rem);
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  background: var(--ink-0);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  color: var(--paper-dim);
+}
+
+.x-grid {
+  display: grid;
+  gap: 1.1rem;
+}
+
+@media (min-width: 780px) {
+  .x-grid.cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.x-status[role='status'] {
+  font-family: var(--sans);
+  font-size: var(--text-small);
+  color: var(--era-accent-soft);
+  min-height: 1.4em;
+}
